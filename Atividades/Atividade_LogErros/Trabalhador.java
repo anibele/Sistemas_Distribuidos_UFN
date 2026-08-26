@@ -10,7 +10,7 @@ public class Trabalhador implements Runnable {
 
     public Trabalhador(List<String> pedacoLog) {
         this.pedacoLog = pedacoLog;
-        this.contagemPorTipo = new int[4]; // Array com 4 espaços
+        this.contagemPorTipo = new int[4];
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Trabalhador implements Runnable {
             if (colunas.length >= 3) {
                 int tipoErro = Integer.parseInt(colunas[2]);
                 
-                // Se o erro for tipo 0, 1, 2 ou 3, somamos 1 na posição correspondente
+                // Se o erro for tipo 0, 1, 2 ou 3, soma 1 na posição correspondente
                 if (tipoErro >= 0 && tipoErro <= 3) {
                     this.contagemPorTipo[tipoErro]++; 
                 }

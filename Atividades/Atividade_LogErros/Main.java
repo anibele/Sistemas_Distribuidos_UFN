@@ -12,15 +12,11 @@ forma isolada e devolve um resumo parcial (contagem de erros, por exemplo).
 O Resultado: O coordenador junta todos os resumos e mostra o resultado final.
 */
 
-import Atividades.Atividade_LogErros.Coordenador;
-import Atividades.Atividade_LogErros.*;
-
 public class Main {
     public static void main(String[] args) throws Exception {
         Visao visao = new Visao();
         Coordenador coordenador = new Coordenador(visao);
         
-        // Inicia passando o nome do arquivo que está salvo no seu computador
-        coordenador.iniciar("erro.log"); 
+        coordenador.iniciar("Atividades\\Atividade_LogErros\\erro.log"); 
     }
 }

@@ -24,7 +24,7 @@ public class Coordenador {
         String linha;
         List<String> pedaco = new ArrayList<>();
 
-        // 1. DIVIDE O ARQUIVO EM PEDAÇOS DE 50 LINHAS
+        // DIVIDE O ARQUIVO EM PEDAÇOS DE 50 LINHAS
         while ((linha = leitor.readLine()) != null) {
             pedaco.add(linha);
             
@@ -48,7 +48,7 @@ public class Coordenador {
         pool.shutdown();
         pool.awaitTermination(1, TimeUnit.HOURS);
 
-        // 3. VARIÁVEL FINAL QUE GUARDA A SOMA DE TUDO (Junção dos resultados)
+        // VARIÁVEL FINAL QUE GUARDA A SOMA DE TUDO (Junção dos resultados)
         int[] totalGeral = new int[4]; 
         
         for (Trabalhador t : trabalhadores) {
@@ -60,7 +60,6 @@ public class Coordenador {
             totalGeral[3] += resumoDaThread[3];
         }
 
-        // 4. MOSTRA O RESULTADO FINAL
         visao.exibirResultadoFinal(totalGeral);
     }
 }
